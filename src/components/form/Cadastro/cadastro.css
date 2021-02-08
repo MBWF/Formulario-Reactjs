@@ -1,0 +1,78 @@
+.page-cadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-page);
+    height: 100vh;
+}
+
+.componente-cadastro {
+    display: flex;
+    height: 30em;
+    width: 30em;
+    background-color: var(--primary);
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.componente-cadastro .login {
+    display: flex;
+    
+}
+
+.componente-cadastro .voltar-icon {
+    font-size: 50px;
+    color: #0FBC59;
+    margin-left: 15px;
+}
+
+.componente-cadastro h1 {
+    color: var(--third);
+    font-size: 32pt;
+    margin: 0px 0px;
+}
+
+.componente-cadastro input {
+    width: 25em;
+    height: 1.5em;
+    margin: 10px 0px;
+    padding: 12px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    background-color: var(--bg-page);
+}
+
+.componente-cadastro input:focus {
+    outline: none !important;
+    border: 1px solid var(--third);
+    
+}
+
+.componente-cadastro button {
+    width: 20em;
+    height: 3em;
+    background-color: var(--third);
+    border: 1px solid var(--third);
+    border-radius: 5px;
+    color: white;
+    margin: 20px 0px 0px 0px;
+    transition: 0.6s;
+}
+
+.componente-cadastro button:hover {
+    background-color: #0FBC59;
+    border: 1px solid #0FBC59;
+    transition: 0.6s;
+}
+
+.componente-cadastro button:focus {
+    outline: none;
+}
+
+.componente-cadastro .login {
+    display: flex;
+    width: 100%;
+}
+

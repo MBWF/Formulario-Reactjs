@@ -59,6 +59,7 @@
     color: white;
     margin: 20px 0px 0px 0px;
     transition: 0.6s;
+    cursor: pointer;
 }
 
 .componente-cadastro button:hover {

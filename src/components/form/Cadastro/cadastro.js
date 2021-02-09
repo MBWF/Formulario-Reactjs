@@ -1,37 +1,31 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback} from 'react'
 import { Link } from 'react-router-dom'
 import {IoArrowBackCircleOutline} from 'react-icons/io5'
 
 import './cadastro.css'
+import {createRequest} from '../../../api'
 
 function Cadastro() {
-
-    const [contas, setContas] = useState([])
 
     const [nome, setNome] = useState('')
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
     const [confSenha, setConfSenha] = useState('')
 
-    useEffect(
-        () => {
-            console.log(contas)
-        }, [contas]
-    )
+    async function create() {
+        if (senha != confSenha)
+            return console.log('Senhas diferentes')
+         
 
-    function create() {
-        if (senha == confSenha) {
-            const users = {
-                nome,
-                email,
-                senha,
-            }
-            setContas([...contas, users])  
-        } 
-        else {
-            console.log('Senhas diferentes')
+        const users = {
+            nome,
+            email,
+            senha,
         }
-    }
+
+        await createRequest(users)
+        console.log('Criado com Sucesso')
+}
 
     return (
         <>
